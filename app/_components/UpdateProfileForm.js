@@ -1,8 +1,14 @@
-"use Client";
+"use client";
+
+import { useState } from "react";
 
 function UpdateProfileForm({ children }) {
-  const countryFlag = "./pt.jpg";
+  const [count, setCount] = useState();
+
+  // CHANGE
+  const countryFlag = "pt.jpg";
   const nationality = "portugal";
+
   return (
     <form className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col">
       <div className="space-y-2">
@@ -25,9 +31,8 @@ function UpdateProfileForm({ children }) {
         <div className="flex items-center justify-between">
           <label htmlFor="nationality">Where are you from?</label>
           <img
-            src="pt.jpg"
+            src={countryFlag}
             alt="Country flag"
-            fill
             className="h-5 rounded-sm"
           />
         </div>

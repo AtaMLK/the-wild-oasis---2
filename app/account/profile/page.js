@@ -1,14 +1,13 @@
 import SelectCountry from "@/app/_components/SelectCountry";
 import UpdateProfileForm from "@/app/_components/UpdateProfileForm";
-import Image from "next/image";
 
 export const metadata = {
-  title: "Profile",
+  title: "Update profile",
 };
 
 export default function Page() {
   // CHANGE
-  const countryFlag = "./pt.jpg";
+  const countryFlag = "pt.jpg";
   const nationality = "portugal";
 
   return (
@@ -21,6 +20,7 @@ export default function Page() {
         Providing the following information will make your check-in process
         faster and smoother. See you soon!
       </p>
+
       <UpdateProfileForm>
         <SelectCountry
           name="nationality"

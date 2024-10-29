@@ -3,7 +3,7 @@ import image1 from "@/public/about-1.jpg";
 import image2 from "@/public/about-2.jpg";
 import { getCabins } from "../_lib/data-service";
 
-export const revalidate = 10;
+export const revalidate = 86400;
 
 export const metadata = {
   title: "About",
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default async function Page() {
   const cabins = await getCabins();
-  console.log(cabins.length);
+
   return (
     <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
       <div className="col-span-3">
@@ -46,10 +46,11 @@ export default async function Page() {
           src={image1}
           alt="Family sitting around a fire pit in front of cabin"
           placeholder="blur"
+          quality={80}
         />
       </div>
 
-      <div className="col-span-2 aspect-square relative">
+      <div className="relative aspect-square col-span-2">
         <Image
           src="/about-2.jpg"
           fill
