@@ -27,13 +27,12 @@ export default async function Navigation() {
           {session?.user?.image ? (
             <Link
               href="/account"
-              className="hover:text-accent-400 transition-colors flex items-center gap-4"
+              className="flex gap-4 items-center hover:text-accent-400 transition-colors rounded"
             >
               <img
-                className="h-8 rounded-full"
+                className="rounded-full h-8 "
                 src={session.user.image}
-                alt={session.user.name}
-                referrerPolicy="no-referrer"
+                alt={session.user.image}
               />
               <span>Guest area</span>
             </Link>

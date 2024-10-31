@@ -1,4 +1,4 @@
-import { signInAction } from "../_lib/actions";
+import signInAction from "../_lib/action";
 
 function SignInButton() {
   return (
