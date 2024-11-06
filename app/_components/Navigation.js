@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { auth } from "../_lib/auth";
+import Image from "next/image";
 
 export default async function Navigation() {
   const session = await auth();
@@ -32,7 +33,7 @@ export default async function Navigation() {
               <img
                 className="rounded-full h-8 "
                 src={session.user.image}
-                alt={session.user.image}
+                /* alt={session.user.image} */
               />
               <span>Guest area</span>
             </Link>
