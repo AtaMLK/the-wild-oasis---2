@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { UsersIcon } from "@heroicons/react/24/solid";
 
 function CabinCard({ cabin }) {
